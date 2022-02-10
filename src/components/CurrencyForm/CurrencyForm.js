@@ -19,7 +19,7 @@ const CurrencyForm = ({ action }) => {
     });
   }
 
-  eturn (
+  return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <label>
         <span>Amount:</span>
