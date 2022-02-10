@@ -19,23 +19,23 @@ const CurrencyForm = ({ action }) => {
     });
   }
 
-  return (
+  eturn (
     <form onSubmit={handleSubmit} className={styles.form}>
       <label>
         <span>Amount:</span>
-        <TextInput type="number" value={amount} onChange={e => setAmount(e.target.value)} />
+        <TextInput data-testid='amount' type="number" value={amount} onChange={e => setAmount(e.target.value)} />
       </label>
       <label>
         <span>From</span>
-        <Select onChange={e => setFrom(e.target.value)}>
+        <Select data-testid='from-select' onChange={e => setFrom(e.target.value)} >
           <option value="PLN">PLN</option>
           <option value="USD">USD</option>
         </Select>
       </label>
       <label>
         <span>To</span>
-        <Select onChange={e => setTo(e.target.value)}>
-          <option value="PLN">PLN</option>
+        <Select data-testid='to-select' onChange={e => setTo(e.target.value)}>
+          <option value="PLN">PLN</option> 
           <option value="USD">USD</option>
         </Select>
       </label>
@@ -43,5 +43,6 @@ const CurrencyForm = ({ action }) => {
     </form>
   );
 };
+
 
 export default CurrencyForm;
