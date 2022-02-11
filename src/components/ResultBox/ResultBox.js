@@ -16,11 +16,12 @@ const ResultBox = ({ from, to, amount }) => {
   const formattedAmount = useMemo(() => formatAmountInCurrency(amount, from), [amount, from]);
 
   return (
-    <div className={styles.result} data-testid='output'>
-      {formattedAmount} = {convertedAmount}
+    <div className={styles.result} data-testid="output">
+      {amount > -1 ? `${formattedAmount} = ${convertedAmount}` : 'Wrong value…'}
     </div>
   );
 };
+
 
 ResultBox.propTypes = {
   from: PropTypes.string.isRequired,
@@ -29,3 +30,5 @@ ResultBox.propTypes = {
 }
 
 export default ResultBox;
+
+// {formattedAmount} = {convertedAmount}
